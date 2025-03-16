@@ -10,11 +10,11 @@ import pe.edu.idat.ec3_sprintBoot_MVC.model.ImpuestoModel;
 @Controller
 public class ImpuestoController {
 
-    @GetMapping("/producto")
+    @GetMapping("/impuesto")
     public String formularioProducto(Model model) {
         model.addAttribute("ImpuestoModel", new ImpuestoModel());
         model.addAttribute("visualizarResultado", false);
-        return "producto";
+        return "impuesto";
     }
 
     @PostMapping("/calcularimpuesto")
