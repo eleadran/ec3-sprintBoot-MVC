@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Cálculo de Comisión</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+<h1 class="mb-4">Calculadora de Comisiones</h1>
+
+<form th:action="@{/calcularcomision}" method="post">
+  <div class="mb-3">
+    <label class="form-label">¿cuales son tus Ventas Mensuales? ($):</label>
+    <input type="number" class="form-control"
+           th:field="${comisionmodel.ventas}"
+           step="0.01" min="0" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Calcular</button>
+</form>
+
+<div th:if="${visualizaralerta}" class="mt-4 alert"
+     th:classappend="${estiloalerta}">
+  <h4 th:text="${resultado}"></h4>
+</div>
+</body>
+</html>
