@@ -6,6 +6,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body class="container mt-5">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" th:href="@{/}">Inicio</a>
+    <div class="navbar-nav">
+      <a class="nav-link" th:href="@{/comision}">Comisión</a>
+      <a class="nav-link" th:href="@{/bonificacion}">Bonificación</a>
+      <a class="nav-link" th:href="@{/imc}">cliente descuento</a>
+      <a class="nav-link" th:href="@{/imc}">impuestos segun el tipo</a>
+    </div>
+  </div>
+</nav>
 <h1 class="mb-4">Calculadora de Comisiones</h1>
 
 <form th:action="@{/calcularcomision}" method="post">
